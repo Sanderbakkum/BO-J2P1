@@ -1,3 +1,4 @@
+
 .header{
     background-color: #F4FAFF;
     margin-top: -10px;
@@ -11,6 +12,10 @@
 body{
     background-color: white;
     margin-left: 0px;
+    
+
+
+
 }
 
 .center{
@@ -31,8 +36,18 @@ body{
 }
 .text{
     color: white;
-    size: 30px;
     width: 270px;
+    font-size: 20px;
+    
+}
+.naarcommunity{
+    height:40px;
+    width: 180px;
+    border-radius: 10px;
+    border: solid #FE4E02 1px;
+    background-color: #FE4E02;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 body {
     padding: 0;

@@ -1,4 +1,4 @@
-<?php $this->layout('layouts::website');?>
+<?php $this->layout('layouts::layout');?>
 
 <form action="<?php echo url("register.handle")?>" method="POST">
     <div class="form-group">
