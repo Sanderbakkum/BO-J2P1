@@ -25,10 +25,10 @@ class WebsiteController {
 		echo $template_engine->render('overons');
 	}
 
-	public function wordttransformer() {
+	public function wordtransformer() {
 
 		$template_engine = get_template_engine();
-		echo $template_engine->render('wordttransformer');
+		echo $template_engine->render('wordtransformer');
 	}
 
 	public function contact() {

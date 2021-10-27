@@ -37,11 +37,12 @@
         <ul class = "links"> 
             <a href="<?php echo url( 'home' ) ?>"<?php if ( current_route_is( 'home' ) ): ?> class="active"<?php endif ?>>Home</a>
             <a href="<?php echo url( 'overons' ) ?>"<?php if ( current_route_is( 'overons' ) ): ?> class="active"<?php endif ?>>Over ons</a>
-            <a href="<?php echo url( 'wordttransformer' ) ?>"<?php if ( current_route_is( 'wordttransformer' ) ): ?> class="active"<?php endif ?>>Wordt Transformer!</a>
+            <a href="<?php echo url( 'wordtransformer' ) ?>"<?php if ( current_route_is( 'wordtransformer' ) ): ?> class="active"<?php endif ?>>Word Transformer!</a>
             <a href="<?php echo url( 'contact' ) ?>"<?php if ( current_route_is( 'contact' ) ): ?> class="active"<?php endif ?>>Contact</a>
+                <a href="<?php echo url( 'registreren' ) ?>"<?php if ( current_route_is( 'registreren' ) ): ?> class="active"<?php endif ?>>Aanmelden</a>
             
             
-            <li><a href="">Aanmelden</a></li>
+            
             <li><a href="">Inloggen</a></li>
     
         </ul>
