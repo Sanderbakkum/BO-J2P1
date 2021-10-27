@@ -5,9 +5,9 @@
 
 $config = [
 	'DB'       => [
-		'HOSTNAME' => 'localhost',
-		'DATABASE' => 'transformers',
-		'USER'     => 'gebruikers',
+		'HOSTNAME' => '127.0.0.1',
+		'DATABASE' => 'transformersusers',
+		'USER'     => 'root',
 		'PASSWORD' => ''
 	],
 	'BASE_URL' => '',  // Zet hier het pad naar de public map in, vanaf http://localhost, anders werken je routes niet!
