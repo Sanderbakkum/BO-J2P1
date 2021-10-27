@@ -5,10 +5,10 @@
 
 $config = [
 	'DB'       => [
-		'HOSTNAME' => '127.0.0.1',
+		'HOSTNAME' => 'localhost',
 		'DATABASE' => 'transformersusers',
 		'USER'     => 'root',
-		'PASSWORD' => ''
+		'PASSWORD' => 'root'
 	],
 	'BASE_URL' => '',  // Zet hier het pad naar de public map in, vanaf http://localhost, anders werken je routes niet!
 	'PUBLIC'     => dirname( __DIR__, 2 ),  // Vanaf dit bestand 2 mappen omhoog

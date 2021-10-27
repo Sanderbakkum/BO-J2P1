@@ -10,7 +10,7 @@
 		<?php echo $this->section( 'css' ) ?>
 	<?php endif; ?>
     
-    <link rel="icon" href="<?php echo site_url( 'images/icon.png' ) ?>">
+    <link rel="icon" href="<?php echo site_url( '/images/icon.png' ) ?>">
 
     
 </head>
