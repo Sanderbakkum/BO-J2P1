@@ -1,6 +1,6 @@
 <?php $this->layout('layouts::layout');?>
 <div class="ons">
-    <p>Over ons</p>
+    <p class="text">Over ons</p>
 </div>
 
 

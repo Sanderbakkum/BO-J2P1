@@ -22,14 +22,14 @@
         <?php echo $this->section( 'content' ) ?>
         </div>
         
-        <div class="center2">graph2</div>
+        <div class="center2">center2</div>
         
     
     </div>
     <nav>
         <input id="nav-toggle" type="checkbox">
         <div class= "Logo">
-            <a href=""> <img src="<?php echo site_url( '/images/logo.webp' ) ?>">
+            <a href="<?php echo url( 'home' ) ?>"<?php if ( current_route_is( 'home' ) ): ?> class="active"<?php endif ?>> <img src="<?php echo site_url( '/images/logo.webp' ) ?>">
             </a>
         </div>
 
@@ -39,7 +39,7 @@
             <a href="<?php echo url( 'overons' ) ?>"<?php if ( current_route_is( 'overons' ) ): ?> class="active"<?php endif ?>>Over ons</a>
             <a href="<?php echo url( 'wordtransformer' ) ?>"<?php if ( current_route_is( 'wordtransformer' ) ): ?> class="active"<?php endif ?>>Word Transformer!</a>
             <a href="<?php echo url( 'contact' ) ?>"<?php if ( current_route_is( 'contact' ) ): ?> class="active"<?php endif ?>>Contact</a>
-                <a href="<?php echo url( 'register' ) ?>"<?php if ( current_route_is( 'register' ) ): ?> class="active"<?php endif ?>>Aanmelden</a>
+            <a href="<?php echo url( 'register' ) ?>"<?php if ( current_route_is( 'register' ) ): ?> class="active"<?php endif ?>>Aanmelden</a>
             
             
             

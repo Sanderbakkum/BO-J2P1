@@ -1,3 +1,3 @@
 <?php $this->layout('layouts::layout');?>
 
-    <p>Contact</p>
+    <p class="text">Contact</p>

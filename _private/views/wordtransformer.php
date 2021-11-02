@@ -1,4 +1,4 @@
 <?php $this->layout('layouts::layout');?>
 <div class="ons">
-    <p>Word Transformer</p>
+    <p class="text">Word Transformer</p>
 </div>

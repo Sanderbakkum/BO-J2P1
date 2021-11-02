@@ -28,7 +28,7 @@
         <div class="grid align__item">
 
             <div class="register">
-                <h2>Aanmelden</h2>
+                <h2 class="text">Aanmelden</h2>
         <form action ="/register/verwerken" method="POST">
             <div class="form__field">
         <input type = "text" name = "username" placeholder = "Gebruikersnaam" required>*<br><br>
@@ -54,7 +54,7 @@
         <input type = "submit" value = "Aanmelden">
             </div>
             </form>
-            <p>Already have an accout? <a href="/login.php">Log in</a></p>
+            <p class="text">Already have an accout? <a class="text" href="/login.php">Log in</a></p>
     </div>
 </div>
     </body>
