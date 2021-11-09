@@ -31,7 +31,7 @@
                 <h2 class="text">Inloggen</h2>
         <form action ="<?php echo url('login.handle')?>" method="POST">
             <div class="form__field">
-        <input type = "text" name = "username" placeholder = "Gebruikersnaam" required>*<br><br>
+        <input type = "email" name = "email" placeholder = "Gebruikersnaam" required>*<br><br>
             </div>
 
             <div class="form__field">

@@ -30,21 +30,11 @@
             <div class="register">
                 <h2 class="text">Aanmelden</h2>
         <form action ="/register/verwerken" method="POST">
-            <div class="form__field">
-        <input type = "text" name = "username" placeholder = "Gebruikersnaam" required>*<br><br>
-            </div>
 
             <div class="form__field">
         <input type = "password" name = "password" placeholder = "Wachtwoord" required>*<br><br>
             </div>
 
-            <div class="form__field">
-        <input type = "text" name = "firstname" placeholder = "Voornaam" required>*<br><br>
-            </div>
-
-            <div class="form__field">
-        <input type = "text" name = "lastname" placeholder = "Achternaam" required>*<br><br>
-            </div>
 
             <div class="form__field">
         <input type = "email" name = "email" placeholder = "E-mailadres" required>*<br><br>

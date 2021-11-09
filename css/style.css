@@ -21,7 +21,7 @@ body{
 .center{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #1E07A0;
-    background-image: linear-gradient(to right, #220cdf, #5626CA);
+    background-image: linear-gradient(to right, #0c22ff, #5626CA);
     
     height: 550px;
     padding: 30px;
@@ -34,9 +34,9 @@ body{
 .center2{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #1E07A0;
-    background-image: linear-gradient(to bottom, #220cdf, #0606a0);
+    background-image: linear-gradient(to right, #0c22ff, #5626ca);
     height: 520px;
-    border-top: solid 1px #220cdf
+    border-top: solid 1px linear-gradient(to right, #0c22ff, #5626ca);
 }
 .left{
     color:white;
@@ -78,6 +78,87 @@ body{
     margin-left: 80px;
     
 }
+.overonsvh{
+    position: absolute;
+    margin-left: 400px;
+    top: 170px;
+    font-size: 18px;
+
+}
+.imagewt{
+    width: 420px;
+    margin-top: 75px;
+}
+.titelwt{
+    position: absolute;
+    margin-left: 650px;
+    top: 170px;
+    color: white;
+    font-size: 50px;
+}
+.smalltextwt{
+    position: absolute;
+    color: white;
+    margin-left: 650px;
+    top: 400px;
+    font-size: 16px;
+}
+.wtbtn{
+    width: 330px;
+    height: 35px;
+    position: absolute;
+    top: 100px;
+    margin-left: -450px;
+    border-radius: 10px;
+    background-color: #FE4E02;
+    border: solid 0px #fe4e02;
+    padding-left: 125px;
+    padding-top: 15px;
+    color: white;
+    text-decoration: none;
+}
+.textcontact{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 100px;
+    text-align: center;
+}
+.smalltitle{
+    border: solid 1px #FE4E02;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    background-color: #fe4e02;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+.imagecon{
+    width: 700px;
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -400px;
+    border-radius: 20px;
+}
+.con1{
+    font-size: 20px;
+    text-align: center;
+    
+}
+.con2{
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    margin-top: -20px;
+}
+.con3{
+    position: relative;
+    font-size: 13px;
+    margin-top: 40px;
+    text-align: center;
+}
 .underline{
     margin-left: 0px;
     width: 6%;
@@ -103,8 +184,12 @@ body{
     width: 270px;
     font-size: 18px;
     padding: 60px;
-    
-    
+}
+.textoo{
+    color: white;
+    width: 270px;
+    font-size: 20px;
+    margin: 60px;
 }
 .hoofdtext{
     padding: 15px;
