@@ -21,7 +21,7 @@ body{
 .center{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #1E07A0;
-    background-image: linear-gradient(to right, #220cdf, #5626CA);
+    background-image: linear-gradient(to right, #0c22ff, #5626CA);
     
     height: 550px;
     padding: 30px;
@@ -34,9 +34,9 @@ body{
 .center2{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #1E07A0;
-    background-image: linear-gradient(to bottom, #220cdf, #0606a0);
+    background-image: linear-gradient(to right, #0c22ff, #5626ca);
     height: 520px;
-    border-top: solid 1px #220cdf
+    border-top: solid 1px linear-gradient(to right, #0c22ff, #5626ca);
 }
 .left{
     color:white;
@@ -85,6 +85,39 @@ body{
     font-size: 18px;
 
 }
+.imagewt{
+    width: 420px;
+    margin-top: 75px;
+}
+.titelwt{
+    position: absolute;
+    margin-left: 650px;
+    top: 170px;
+    color: white;
+    font-size: 50px;
+}
+.smalltextwt{
+    position: absolute;
+    color: white;
+    margin-left: 650px;
+    top: 400px;
+    font-size: 16px;
+}
+.wtbtn{
+    width: 330px;
+    height: 35px;
+    position: absolute;
+    top: 100px;
+    margin-left: -450px;
+    border-radius: 10px;
+    background-color: #FE4E02;
+    border: solid 0px #fe4e02;
+    padding-left: 125px;
+    padding-top: 15px;
+    color: white;
+    text-decoration: none;
+}
+
 .underline{
     margin-left: 0px;
     width: 6%;
