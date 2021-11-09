@@ -22,7 +22,7 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #1E07A0;
     width: 1920px;
-    height: 500px;
+    height: 550px;
     padding: 30px;
     
 }
@@ -31,14 +31,18 @@ body{
     padding: 27px;
 }
 .center2{
-    background-color: #1e07a0fa;
+    background-color: #1E07A0;
     height: 220px;
     border-top: solid 1px rgba(0, 0, 0, 0.164);
+}
+.left{
+    color:white
 }
 .text{
     color: white;
     width: 270px;
-    font-size: 20px;
+    font-size: 18px;
+    padding: 60px;
     
     
 }
@@ -206,7 +210,7 @@ img {vertical-align: middle;}
 /* Slideshow container */
 .slideshow-container {
     right: 150px;
-    top: 150px;
+    top: 190px;
   position: absolute;
   border-radius: 20px;
   

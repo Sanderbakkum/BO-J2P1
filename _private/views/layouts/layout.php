@@ -22,7 +22,12 @@
         <?php echo $this->section( 'content' ) ?>
         </div>
         
-        <div class="center2">center2</div>
+        <div class="center2">
+        <div class="left">
+         <h1> Transformers <br> Community </1>
+         <h2> Wij empoweren jongeren<br>om mentaalgezond te zijn.
+        </div>
+        </div>
         
     
     </div>
