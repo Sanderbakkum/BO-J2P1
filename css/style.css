@@ -78,6 +78,13 @@ body{
     margin-left: 80px;
     
 }
+.overonsvh{
+    position: absolute;
+    margin-left: 400px;
+    top: 170px;
+    font-size: 18px;
+
+}
 .underline{
     margin-left: 0px;
     width: 6%;
@@ -103,8 +110,12 @@ body{
     width: 270px;
     font-size: 18px;
     padding: 60px;
-    
-    
+}
+.textoo{
+    color: white;
+    width: 270px;
+    font-size: 20px;
+    margin: 60px;
 }
 .hoofdtext{
     padding: 15px;
