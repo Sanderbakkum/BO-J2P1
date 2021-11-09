@@ -12,18 +12,15 @@ namespace Website\Controllers;
  */
 class LoginController {
 
-	public function login() {
+	public function loginForm() {
 
 		$template_engine = get_template_engine();
-		echo $template_engine->render('login');
+		echo $template_engine->render('login_form');
 
 	}
 
 	public function handleLoginForm() {
-
-		$template_engine = get_template_engine();
-		echo $template_engine->render('login');
-
+		echo "LOGIN AFHANDLEN";
 	}
 
 }

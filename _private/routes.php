@@ -16,9 +16,12 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	SimpleRouter::get( '/contact', 'WebsiteController@contact')->name('contact');
 	SimpleRouter::get( '/overons', 'WebsiteController@overons' )->name( 'overons' );
 	SimpleRouter::get( '/wordtransformer', 'WebsiteController@wordtransformer' )->name( 'wordtransformer' );
+	
 	SimpleRouter::get( '/register', 'RegisterController@registrationForm' )->name( 'register.form' );
 	SimpleRouter::post( '/register/verwerken', 'RegisterController@registrationprocess' )->name( 'register.process' );
-	
+
+	SimpleRouter::get( '/login', 'LoginController@loginForm' )->name( 'login.form' );
+	SimpleRouter::post( '/login/verwerken', 'LoginController@handleLoginForm' )->name( 'login.handle' );
 
 
 
