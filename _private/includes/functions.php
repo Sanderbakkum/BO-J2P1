@@ -91,23 +91,40 @@ function validateRegistationData($data) {
 
 	$errors = [];
 
-	$email = filter_var( $data['email'], FILTER_VALIDATE_EMAIL );
-	$password = trim( $data['password'] );
+	$email = filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL );
+	$firstname = trim( $_POST['firstname'] );
+	$lastname = trim( $_POST['lastname'] );
+	$username = trim( $_POST['username'] );
+	$password = trim( $_POST['password'] );
 	
 	if ( $email == false ) {
 		$errors['email'] = 'Geen geldig email ingevuld';
 	}
 
+	if ( strlen( $username ) <6 ) {
+		$errors['username'] = 'Geen geldige username';
+	}
 
 	if ( strlen( $password ) <6 ) {
 		$errors['password'] = 'Geen geldig wachtwoord';
+	}
+
+	if ( strlen( $firstname ) >20 ) {
+		$errors['firstname'] = 'Geen geldig voornaam';
+	}
+
+	if ( strlen( $lastname ) >20 ) {
+		$errors['lastname'] = 'Geen geldige achternaam';
 	}
 
 	
 
 	$data = [
 		'email' => $email,
-		'password' => $password
+		'password' => $password,
+		'firstname' => $firstname,
+		'lastname' => $lastname,
+		'username' => $username
 	];
 
 	return [
@@ -133,17 +150,23 @@ function userNotRegistered($email) {
 	}
 	
 
-function createUser($email, $password){
+function createUser($email, $password, $firstname, $lastname, $username){
 	
 	$connection = dbConnect();
-	$sql = "INSERT INTO `users` (`email`, `password`) VALUES (:email, :password)";
+	$sql = "INSERT INTO `users` (`email`, `password`, `firstname`, `lastname`, `username`) VALUES (:email, :password, :firstname, :lastname, :username)";
 			$statement = $connection->prepare( $sql );
 			$safe_password = password_hash( $password, PASSWORD_DEFAULT);
 			$params = [
 				'email' => $email,
-				'password' => $safe_password
+				'password' => $safe_password,
+				'firstname' => $firstname,
+				'lastname' => $lastname,
+				'username' => $username
 			]; 
 			$statement->execute( $params );
-			echo "Klaar";
+			header("Location: /login");
+			die();
+			
+			
 
 }

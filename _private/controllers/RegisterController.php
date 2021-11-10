@@ -30,7 +30,7 @@ public function registrationprocess(){
 	if ( count( $result['errors'] ) === 0 ) {
 
 
-		createUser($result['data']['email'], $result['data']['password']);
+		createUser($result['data']['email'], $result['data']['password'], $result['data']['firstname'], $result['data']['lastname'], $result['data']['username']);
 		
 	} else {
 			$errors['email'] = 'Dit gebruiker bestaat al';
