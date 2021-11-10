@@ -20,13 +20,12 @@ class LoginController {
 	}
 
 	public function handleLoginForm() {
-		$result = validateRegistationData($_POST);
+		$result = validateLoginData($_POST);
         
         if ( userNotRegistered( $result['data']['email'])) {
             $result['errors']['email'] = 'Deze gebruiker is niet bekend';
         } else {
-            $user = getUserByEmail( $result['data']['email']);
-        
+            echo "dit werkt"; exit;
         
         }
         $template_engine = get_template_engine();

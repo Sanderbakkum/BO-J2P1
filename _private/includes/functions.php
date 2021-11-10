@@ -91,11 +91,11 @@ function validateRegistationData($data) {
 
 	$errors = [];
 
-	$email = filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL );
-	$firstname = trim( $_POST['firstname'] );
-	$lastname = trim( $_POST['lastname'] );
-	$username = trim( $_POST['username'] );
-	$password = trim( $_POST['password'] );
+	$email = filter_var( $data['email'], FILTER_VALIDATE_EMAIL );
+	$firstname = trim( $data['firstname'] );
+	$lastname = trim( $data['lastname'] );
+	$username = trim( $data['username'] );
+	$password = trim( $data['password'] );
 	
 	if ( $email == false ) {
 		$errors['email'] = 'Geen geldig email ingevuld';
@@ -134,12 +134,41 @@ function validateRegistationData($data) {
 
 }
 
+function validateLoginData($data) {
+
+	$errors = [];
+
+	$email = filter_var( $data['email'], FILTER_VALIDATE_EMAIL );
+	$password = trim( $data['password'] );
+	
+	if ( $email == false ) {
+		$errors['email'] = 'Geen geldig email ingevuld';
+	}
+	if ( strlen( $password ) <6 ) {
+		$errors['password'] = 'Geen geldig wachtwoord';
+	}
+
+
+	
+
+	$data = [
+		'email' => $email,
+		'password' => $password
+	];
+
+	return [
+		'data' => $data,
+		'errors' => $errors
+	];
+
+}
+
 function userNotRegistered($email) {
  
 	// Checken of de gebruiker al bestaat
 	 
 	$connection = dbConnect();
-	$sql = "SELECT * FROM `gebruikers` WHERE `email` = :email";
+	$sql = "SELECT * FROM `users` WHERE `email` = :email";
 	$statement = $connection->prepare($sql);
 	$statement->execute(['email' => $email]);
 	 
