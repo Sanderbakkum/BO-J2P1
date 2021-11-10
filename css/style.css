@@ -36,7 +36,7 @@ body{
     background-color: #1E07A0;
     background-image: linear-gradient(to right, #0c22ff, #5626ca);
     height: 520px;
-    border-top: solid 1px linear-gradient(to right, #0c22ff, #5626ca);
+    border-top: solid 1px white;
 }
 .left{
     color:white;
