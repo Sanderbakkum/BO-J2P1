@@ -101,11 +101,11 @@ function validateRegistationData($data) {
 		$errors['email'] = 'Geen geldig email ingevuld';
 	}
 
-	if ( strlen( $username ) <6 ) {
+	if ( strlen( $username ) <2 ) {
 		$errors['username'] = 'Geen geldige username';
 	}
 
-	if ( strlen( $password ) <6 ) {
+	if ( strlen( $password ) <2 ) {
 		$errors['password'] = 'Geen geldig wachtwoord';
 	}
 
@@ -165,18 +165,19 @@ function validateLoginData($data) {
 
 function userNotRegistered($email) {
  
-	// Checken of de gebruiker al bestaat
-	 
-	$connection = dbConnect();
-	$sql = "SELECT * FROM `users` WHERE `email` = :email";
-	$statement = $connection->prepare($sql);
-	$statement->execute(['email' => $email]);
-	 
-	$num_rows = $statement->rowCount();
-	 
-	return ($num_rows === 0); // True of false
-	 
-	}
+// Checken of de gebruiker al bestaat
+ 
+$connection = dbConnect();
+$sql = "SELECT * FROM `users` WHERE `email` = :email";
+$statement = $connection->prepare($sql);
+$statement->execute(['email' => $email]);
+ 
+$num_rows = $statement->rowCount();
+ 
+return ($num_rows === 0); // True of false
+ 
+}
+
 	
 
 function createUser($email, $password, $firstname, $lastname, $username){
@@ -198,4 +199,46 @@ function createUser($email, $password, $firstname, $lastname, $username){
 			
 			
 
+}
+
+function loginUser($user){
+	$_SESSION['user_id'] = $user['id'];
+}
+
+function logoutUser(){
+	unset($_SESSION['user_id']);
+}
+
+function isLoggedIn(){
+	return !empty($_SESSION['user_id']);
+}
+
+function loginCheck() {
+	if ( ! isLoggedin() ) {
+		$login_url = url( 'login.form' );
+		redirect( $login_url);
+	}
+}
+
+function getLoggedInUsername(){
+	$username = "niet ingelogd";
+	if ( ! isLoggedin() ) {
+		return $username;
+	}
+
+	$user_id = $_SESSION['user_id'];
+	$user = GetUserById($user_id);
+
+	if ($user){
+		$username = $user['username'];
+	}
+	return $username;
+}
+
+function getAllPosts(){
+	$connection = dbConnect();
+	$sql = "SELECT * FROM `blog`";
+	$statement = $connection->query($sql);
+	$blog = $statement->fetchAll();
+	print_r($blog); exit;
 }

@@ -22,6 +22,12 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 
 	SimpleRouter::get( '/login', 'LoginController@loginForm' )->name( 'login.form' );
 	SimpleRouter::post( '/login/verwerken', 'LoginController@handleLoginForm' )->name( 'login.handle' );
+	SimpleRouter::get('/ingelogd/dashboard', 'LoginController@userDashboard')->name( 'login.dashboard' );
+	SimpleRouter::get('/logout', 'LoginController@logout')->name( 'logout' );
+
+	SimpleRouter::get( '/blog', 'BlogController@blog' )->name( 'blog' );
+	SimpleRouter::get( '/blog/post', 'BlogController@postMaken' )->name( 'blog.post' );
+	SimpleRouter::post( '/blog/post/handle', 'BlogController@postVerwerken' )->name( 'post.handle' );
 
 
 

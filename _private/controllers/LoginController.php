@@ -21,15 +21,35 @@ class LoginController {
 
 	public function handleLoginForm() {
 		$result = validateLoginData($_POST);
-        
         if ( userNotRegistered( $result['data']['email'])) {
             $result['errors']['email'] = 'Deze gebruiker is niet bekend';
         } else {
-            echo "dit werkt"; exit;
+            
+            $user = getUserByEmail($result['data']['email']);
+            if (password_verify($result['data']['password'], $user['password'])){
+                $_SESSION['user_id'] = $user['id'];
+                
+                loginUser($user);
+                redirect(url('login.dashboard'));
+            }else{
+                $result['errors']['password'] = 'Wachtwoord is incorrect.';
+            }
         
         }
         $template_engine = get_template_engine();
 		echo $template_engine->render('login_form', ['errors' => $result['errors']]);
+    }
+
+    public function userDashboard(){
+
+        loginCheck();
+        $template_engine = get_template_engine();
+		echo $template_engine->render('user_dashboard');
+    }
+
+    public function logout() {
+        logoutUser();
+        redirect(url('home'));
     }
 
 }

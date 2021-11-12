@@ -23,7 +23,7 @@ body{
     background-color: #1E07A0;
     background-image: linear-gradient(to right, #0c22ff, #5626CA);
     
-    height: 550px;
+    height: 100vh;
     padding: 30px;
     
 }
